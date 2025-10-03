@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Audi S3 — Продажа</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <nav>
+    <div class="logo">Audi S3</div>
+    <ul>
+      <li><a href="#gallery">Галерея</a></li>
+      <li><a href="#details">Характеристики</a></li>
+      <li><a href="#contact">Контакты</a></li>
+    </ul>
+  </nav>
+
+  <header class="hero">
+    <h1>Продажа Audi S3</h1>
+    <p>Мощность. Элегантность. Надёжность.</p>
+    <a href="#contact" class="btn">Связаться</a>
+  </header>
+
+  <section id="gallery" class="gallery">
+    <h2>Галерея</h2>
+    <div class="images">
+      <img src="images/audi-s3-1.jpg" alt="Audi S3 вид спереди" />
+      <img src="images/audi-s3-2.jpg" alt="Audi S3 салон" />
+      <img src="images/audi-s3-3.jpg" alt="Audi S3 сзади" />
+    </div>
+  </section>
+
+  <section id="details" class="details">
+    <h2>Характеристики</h2>
+    <div class="specs">
+      <div><strong>Год:</strong> 2022</div>
+      <div><strong>Пробег:</strong> 15 000 км</div>
+      <div><strong>Мощность:</strong> 310 л.с.</div>
+      <div><strong>Привод:</strong> полный</div>
+      <div><strong>Цвет:</strong> черный металлик</div>
+      <div><strong>Цена:</strong> $45 000</div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Связаться с продавцом</h2>
+    <form id="contactForm">
+      <input type="text" placeholder="Ваше имя" required />
+      <input type="email" placeholder="Email" required />
+      <textarea placeholder="Ваше сообщение" required></textarea>
+      <button type="submit">Отправить</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Audi S3. Все права защищены.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
