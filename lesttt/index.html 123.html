@@ -3,60 +3,46 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Audi S3 — Продажа</title>
+  <title>Магазин вещей</title>
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <nav>
-    <div class="logo">Audi S3</div>
-    <ul>
-      <li><a href="#gallery">Галерея</a></li>
-      <li><a href="#details">Характеристики</a></li>
-      <li><a href="#contact">Контакты</a></li>
-    </ul>
-  </nav>
 
   <header class="hero">
-    <h1>Продажа Audi S3</h1>
-    <p>Мощность. Элегантность. Надёжность.</p>
-    <a href="#contact" class="btn">Связаться</a>
+    <h1>Магазин вещей</h1>
+    <p>Добавление товаров доступно только администратору</p>
   </header>
 
-  <section id="gallery" class="gallery">
-    <h2>Галерея</h2>
-    <div class="images">
-      <img src="images/audi-s3-1.jpg" alt="Audi S3 вид спереди" />
-      <img src="images/audi-s3-2.jpg" alt="Audi S3 салон" />
-      <img src="images/audi-s3-3.jpg" alt="Audi S3 сзади" />
-    </div>
+  <!-- Форма входа администратора -->
+  <section class="form-section" id="adminLogin">
+    <h2>Вход администратора</h2>
+    <input type="password" id="adminPassword" placeholder="Введите пароль" />
+    <button onclick="checkAdmin()">Войти</button>
+    <p id="loginMessage" style="color: red;"></p>
   </section>
 
-  <section id="details" class="details">
-    <h2>Характеристики</h2>
-    <div class="specs">
-      <div><strong>Год:</strong> 2022</div>
-      <div><strong>Пробег:</strong> 15 000 км</div>
-      <div><strong>Мощность:</strong> 310 л.с.</div>
-      <div><strong>Привод:</strong> полный</div>
-      <div><strong>Цвет:</strong> черный металлик</div>
-      <div><strong>Цена:</strong> $45 000</div>
-    </div>
-  </section>
-
-  <section id="contact" class="contact">
-    <h2>Связаться с продавцом</h2>
-    <form id="contactForm">
-      <input type="text" placeholder="Ваше имя" required />
-      <input type="email" placeholder="Email" required />
-      <textarea placeholder="Ваше сообщение" required></textarea>
-      <button type="submit">Отправить</button>
+  <!-- Форма добавления товара (скрыта по умолчанию) -->
+  <section class="form-section" id="productFormSection" style="display: none;">
+    <form id="productForm">
+      <input type="text" id="title" placeholder="Название товара" required />
+      <textarea id="description" placeholder="Описание товара" required></textarea>
+      <input type="number" id="price" placeholder="Цена (BYN)" required />
+      <input type="file" id="image" accept="image/*" required />
+      <button type="submit">Создать брошюру</button>
     </form>
   </section>
 
+  <!-- Список товаров -->
+  <section id="brochures" class="brochure-list">
+    <h2>Брошюры товаров</h2>
+    <div id="brochureContainer"></div>
+  </section>
+
   <footer>
-    <p>&copy; 2025 Audi S3. Все права защищены.</p>
+    <p>&copy; 2025 Магазин вещей. Все права защищены.</p>
   </footer>
 
   <script src="script.js"></script>
 </body>
+</html>
